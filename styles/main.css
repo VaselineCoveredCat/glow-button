@@ -1,0 +1,253 @@
+:root {
+  --color-teal-1: #d7fff7;
+  --color-teal-2: #00ffe4;
+  --color-teal-3: #009e8c;
+  --color-teal-4: #007c6e;
+  --color-teal-5: #00443c;
+  --color-teal-6: #002722;
+  --color-azure-1: #e8f2ff;
+  --color-azure-2: #c6e0ff;
+  --color-azure-3: #008fdb;
+  --color-azure-4: #0071af;
+  --color-azure-5: #003b5e;
+  --color-azure-6: #001c30;
+}
+
+@font-face {
+  font-family: "Open Sans-fallback";
+  font-weight: 700;
+  src: local("Arial");
+  size-adjust: 105.44%;
+  ascent-override: 98%;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/open-sans-v29-latin-700.woff2") format("woff2"),
+    url("../fonts/open-sans-v29-latin-700.woff") format("woff");
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 112.5%;
+  line-height: 1.6;
+  cursor: default;
+  background-color: var(--color-teal-2);
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  color: var(--color-teal-1);
+  background-color: var(--color-teal-6);
+}
+
+::selection {
+  color: var(--color-teal-1);
+  background-color: var(--color-teal-6);
+}
+
+body {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Open Sans", "Open Sans-fallback", sans-serif;
+  font-weight: 700;
+  color: var(--color-teal-6);
+  background-color: var(--color-teal-1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+button {
+  position: relative;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  color: var(--color-teal-6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background-color: var(--color-azure-1);
+  border: none;
+  transition: all 0.3s;
+}
+
+button span {
+  position: absolute;
+  display: block;
+}
+
+button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-azure-4));
+  -webkit-animation: animate1 1s linear infinite;
+          animation: animate1 1s linear infinite;
+}
+
+button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--color-azure-4));
+  -webkit-animation: animate2 1s linear infinite;
+          animation: animate2 1s linear infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+button span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(270deg, transparent, var(--color-azure-4));
+  -webkit-animation: animate3 1s linear infinite;
+          animation: animate3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--color-azure-4));
+  -webkit-animation: animate4 1s linear infinite;
+          animation: animate4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+button:hover {
+  color: var(--color-teal-1);
+  background-color: var(--color-azure-4);
+  box-shadow: 0 0 5px var(--color-azure-4), 0 0 25px var(--color-azure-4),
+    0 0 50px var(--color-azure-4), 0 0 200px var(--color-azure-4);
+}
+
+@-webkit-keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@-webkit-keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+/* 1280px */
+@media (min-width: 80em) {
+  html {
+    font-size: 125%;
+  }
+}
+
+/* 1920px */
+@media (min-width: 120em) {
+  html {
+    font-size: 137.5%;
+  }
+}
